@@ -1,17 +1,22 @@
 const Hello = (props) => {
+  console.log(props);
   return (
     <div>
-      <p>Hello {props.name}</p>
+      <p>
+        Hello {props.name}, you are {props.age} years old
+      </p>
     </div>
   );
 };
 
 const App = () => {
+  const name = "Emelie";
+  const age = 33;
   return (
     <div>
       <h1>Greetings</h1>
-      <Hello name="Alex" />
-      <Hello name="Emelie" />
+      <Hello name="Alex" age={30 + 2} />
+      <Hello name={name} age={age} />
     </div>
   );
 };
